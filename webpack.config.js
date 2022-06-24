@@ -10,11 +10,13 @@ module.exports = {
   entry: "./src/index.tsx",
   devServer: {
     hot: true,
+    historyApiFallback: true,
   },
   target: "web",
   output: {
     filename: "bundle.[hash].js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "auto",
   },
   plugins: [
     new HtmlWebpackPlugin({

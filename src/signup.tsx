@@ -16,6 +16,7 @@ const Signup = () => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
+      name: data.get("name"),
       email: data.get("email"),
       password: data.get("password"),
     });
@@ -42,7 +43,7 @@ const Signup = () => {
           }}
         >
           <Typography variant="h4">Flash Cards App</Typography>
-          <Typography sx={{ mt: 5 }}>Sign In</Typography>
+          <Typography sx={{ mt: 5 }}>Sign up</Typography>
           <Box
             component="form"
             onSubmit={handleSubmit}
@@ -84,13 +85,19 @@ const Signup = () => {
               fullWidth
               variant="contained"
               type="submit"
-              sx={{ mt: 3, mb: 2, color: "white", backgroundColor: "#09329C" }}
+              sx={{
+                mt: 3,
+                mb: 2,
+                color: "white",
+                backgroundColor: "#09329C",
+                "&:hover": { backgroundColor: "#09329C" },
+              }}
             >
               Login
             </Button>
             <Grid container alignItems="center" justifyContent="center">
-              <Link variant="body1" href="#" sx={{ color: "#09329C" }}>
-                {"Don't have an account? Signup"}
+              <Link variant="body1" href="login" sx={{ color: "#09329C" }}>
+                {"Already have an account? login"}
               </Link>
             </Grid>
           </Box>
