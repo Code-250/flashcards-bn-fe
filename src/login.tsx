@@ -13,7 +13,7 @@ import { useMutation } from "@apollo/client";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import FlashCard from "./assets/card.jpg";
+// import FlashCard from "./assets/card.jpg";
 import { loginSchema } from "./validations/authenticationSchema";
 import { LOGIN_MUTATION } from "./graphql/authentication";
 
@@ -141,7 +141,7 @@ const Login = () => {
           item
           sx={{ width: "50.0%", display: { xs: "none", md: "block" } }}
         >
-          <img src={FlashCard} alt="flash card" width="100%" height="100%" />
+          {/* <img src={FlashCard} alt="flash card" width="100%" height="100%" /> */}
         </Grid>
       </Grid>
     </ThemeProvider>
