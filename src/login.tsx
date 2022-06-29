@@ -47,8 +47,11 @@ const Login = () => {
         password: formState.password,
       },
     })
-      .then(() => {
-        console.log(data, "the data here");
+      .then((res) => {
+        const { token } = res.data.login;
+        console.log(token, "the data here");
+        localStorage.setItem("token", JSON.stringify(token));
+        Navigate("/dashboard");
       })
       .catch((err: any) => {
         console.log(err.message, "error message");

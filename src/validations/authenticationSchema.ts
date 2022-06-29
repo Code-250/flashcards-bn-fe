@@ -15,8 +15,5 @@ export const signupSchema = yup.object({
     .string()
     .email("a valid email is required")
     .required("email is required"),
-  password: yup
-    .string()
-    .matches(regx, "only letters and numbers are allowed")
-    .required("password field is required"),
+  password: yup.string().required("password field is required"),
 });
