@@ -8,7 +8,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
-// import FlashCard from "./assets/card.jpg";
+import FlashCard from "./assets/card.jpg";
 
 const theme = createTheme();
 const Signup = () => {
@@ -103,7 +103,7 @@ const Signup = () => {
           </Box>
         </Grid>
         <Grid item sx={{ width: "50%", display: { xs: "none", md: "block" } }}>
-          {/* <img src={FlashCard} alt="flash card" width="100%" height="100%" /> */}
+          <img src={FlashCard} alt="flash card" width="100%" height="100%" />
         </Grid>
       </Grid>
     </ThemeProvider>
